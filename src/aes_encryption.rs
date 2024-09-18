@@ -26,7 +26,7 @@ fn decrypt(data: EncryptedData, key: &[u8; 32]) -> Result<Vec<u8>, aes_gcm::Erro
 }
 
 
-pub fn encrypt_file(path: &str, passphrase: String) {
+pub fn encrypt_file(path: &str, passphrase: &str) {
     let (bytes_read, file_content) = read_file(path)
         .expect("Failed to read file.");
 
@@ -46,7 +46,7 @@ pub fn encrypt_file(path: &str, passphrase: String) {
     clear_write_file(path, new_file_content).expect("Failed to write encrypted data to file.");
 }
 
-pub fn decrypt_file(path: &str, passphrase: String) {
+pub fn decrypt_file(path: &str, passphrase: &str) {
     let (bytes_read, file_contents) = read_file(path).unwrap();
     println!("Bytes read: {}", bytes_read);
     let mut file_contents = file_contents;
