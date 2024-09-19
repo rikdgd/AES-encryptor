@@ -1,7 +1,9 @@
 [package]
 name = "AES-encryptor"
-version = "0.1.0"
+version = "1.0.0"
 edition = "2021"
+authors = ["Rik de Goede"]
+description = "Minimalistic terminal application to encrypt/decrypt files using AES-GCM (256 bits)."
 
 [dependencies]
 aes-gcm = "0.10"
