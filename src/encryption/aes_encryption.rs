@@ -48,7 +48,7 @@ pub fn encrypt_file(path: &str, passphrase: &str) {
 
 pub fn decrypt_file(path: &str, passphrase: &str) {
     let (bytes_read, file_contents) = read_file(path).unwrap();
-    println!("Bytes read: {}", bytes_read);
+    println!("Bytes to decrypt: {}", bytes_read);
     let mut file_contents = file_contents;
 
     // Get the nonce from the first 12 bytes of the file.
