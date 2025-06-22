@@ -14,6 +14,6 @@ pub fn derive_key_from_passphrase(pass: &[u8], salt: &[u8]) -> [u8; 32] {
 
 pub fn generate_salt() -> [u8; 16] {
     let mut buffer = [0u8; 16];
-    rand::thread_rng().fill(&mut buffer);
+    rand::rng().fill(&mut buffer);
     buffer
 }
