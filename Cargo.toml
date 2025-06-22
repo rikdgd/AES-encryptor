@@ -8,5 +8,5 @@ description = "Minimalistic terminal application to encrypt/decrypt files using 
 [dependencies]
 aes-gcm = "0.10"
 sha2 = "0.10"
-rand = "0.8"
+rand = "0.9"
 pbkdf2 = "0.12"
